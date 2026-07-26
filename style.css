@@ -470,3 +470,151 @@ letter-spacing:1px;
 opacity:.9;
 
 }
+/* ===================================
+   HOVER EFFECT
+=================================== */
+
+.login-card:hover{
+
+transform:translateY(-5px);
+
+transition:.4s;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.45),
+0 0 60px rgba(59,130,246,.45);
+
+}
+
+/* ===================================
+   SHINE EFFECT
+=================================== */
+
+.login-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-50%;
+
+left:-50%;
+
+width:200%;
+
+height:200%;
+
+background:
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.18),
+transparent);
+
+transform:rotate(25deg);
+
+animation:shine 7s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes shine{
+
+0%{
+
+transform:translateX(-120%) rotate(25deg);
+
+}
+
+100%{
+
+transform:translateX(120%) rotate(25deg);
+
+}
+
+}
+
+/* ทำให้ ::before อยู่ในกรอบ */
+
+.login-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+.login-card{
+
+width:92%;
+
+padding:35px 25px;
+
+}
+
+.logo{
+
+width:75px;
+
+height:75px;
+
+font-size:30px;
+
+}
+
+.login-card h1{
+
+font-size:28px;
+
+}
+
+button{
+
+height:54px;
+
+font-size:17px;
+
+}
+
+.input-box input{
+
+height:54px;
+
+font-size:16px;
+
+}
+
+}
+
+/* ===================================
+   FADE IN
+=================================== */
+
+body{
+
+animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
